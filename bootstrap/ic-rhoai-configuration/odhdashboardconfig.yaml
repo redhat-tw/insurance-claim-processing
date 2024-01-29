@@ -19,16 +19,15 @@ spec:
     enabled: true
     notebookNamespace: rhods-notebooks
     pvcSize: 5Gi
-    gpuSetting: '4'
   notebookSizes:
     - name: Standard
       resources:
         limits:
           cpu: '2'
-          memory: 8Gi
+          memory: 4Gi
         requests:
           cpu: '1'
-          memory: 6Gi
+          memory: 2Gi
   templateOrder: []
 
 

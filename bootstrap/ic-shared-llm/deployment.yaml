@@ -28,7 +28,7 @@ spec:
               memory: 24Gi
               nvidia.com/gpu: '1'
             requests:
-              cpu: '6'
+              cpu: '4'
           readinessProbe:
             httpGet:
               path: /health

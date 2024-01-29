@@ -11,7 +11,7 @@ spec:
     spec:
       initContainers:
       - name: wait-for-minio
-        image: busybox:1.28
+        image: docker.io/busybox:1.36
         command: ['sh', '-c', 'until nc -z -v -w30 $MINIO_ENDPOINT 9000; do echo "Waiting for Minio connection..."; sleep 2; done;']
         env:
         - name: MINIO_ENDPOINT
@@ -24,7 +24,7 @@ spec:
         args:
         - -ec
         - |-
-          git clone https://github.com/rh-aiservices-bu/insurance-claim-processing.git
+          git clone https://github.com/redhat-tw/insurance-claim-processing.git
 
           cat << 'EOF' | python3
           import boto3, os, botocore
